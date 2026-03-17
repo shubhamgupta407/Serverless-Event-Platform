@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700;1,900&display=swap');
+
+.section3-container {
+  background-color: var(--bg-color);
+  padding: 150px 8% 0 8%;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  transition: background-color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 200px;
+  /* margin-top: 100px; */
+  position: relative;
+  z-index: 5;
+}
+
+/* Left Branding Column */
+.footer-brand h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.footer-brand h2 .serif-italic {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.newsletter-wrap {
+  margin-top: 50px;
+}
+
+.newsletter-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-accent);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 400px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 10px;
+  transition: border-color 0.4s ease;
+}
+
+.newsletter-form:focus-within {
+  border-color: var(--primary-accent);
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 10px 0;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletter-submit {
+  background: transparent;
+  border: none;
+  color: var(--primary-accent);
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.newsletter-submit:hover {
+  transform: translateX(5px);
+}
+
+/* Navigation Columns */
+.footer-col h4 {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, margin-left 0.3s ease;
+  display: inline-block;
+}
+
+.footer-col ul li a:hover {
+  color: var(--text-primary);
+  margin-left: 5px;
+}
+
+/* Live Status Indicator */
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00ff88;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 1px solid #00ff88;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.giant-watermark {
+  position: absolute;
+  bottom: -5vw;
+  left: 2vw;
+  font-family: 'system-ui';
+  font-size: 28vw;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--glow-color);
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 0.8;
+  z-index: 1;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  background: transparent;
+}
+
+.copyright-text {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.copyright-text b {
+  color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .giant-watermark {
+    font-size: 40vw;
+  }
+}

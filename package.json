@@ -1,0 +1,9 @@
+{
+  "name": "serverless-event-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm install --prefix Frontend && npm run build --prefix Frontend && npm install --prefix Backend",
+    "start": "node Backend/index.js"
+  }
+}

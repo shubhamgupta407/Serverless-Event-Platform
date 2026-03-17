@@ -1,0 +1,83 @@
+.marquee-container {
+    position: relative;
+    margin-top: -40px;
+    margin-bottom: -100px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* Prevent cutting off tilted child elements */
+    background-color: transparent;
+    z-index: 50;
+    pointer-events: none;.secondary {
+    background-color: #efefff;  /* soft lavender instead of harsh white */
+    color: #5656da;
+    transform: rotate(2deg);
+    z-index: 1;
+}
+
+.primary {
+    background-color: #5656da;
+    color: #fff;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.marquee-band {
+    position: absolute;
+    width: 110vw;
+    display: flex;
+    top: 10%;
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    font-family: "Clash1", "euclid", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.08em;  /* adds breathing room between letters */
+}
+    /* Allow clicking the background elements */
+}
+
+.marquee-band {
+    position: absolute;
+    width: 110vw;
+    display: flex;
+    top: 10%;
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    font-family: "Clash1", "euclid", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-band .separator {
+    margin: 0 40px;
+    font-weight: 100;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+}
+
+.primary {
+    background-color: #5656da;
+    color: #fff;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.secondary {
+    background-color: #fff;
+    color: #5656da;
+    transform: rotate(2deg);
+    z-index: 1;
+}
