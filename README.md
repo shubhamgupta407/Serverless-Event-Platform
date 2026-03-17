@@ -9,6 +9,8 @@ Users can create, manage, and explore events seamlessly with instant updates and
 
 [eventplatform1.onrender.com](https://eventplatform1.onrender.com)
 
+> ⚠️ App may take a few seconds to load due to free hosting.
+
 ---
 
 ## ✨ Features
