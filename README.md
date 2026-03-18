@@ -77,16 +77,7 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
 
-> *(Add screenshots here — VERY important)*
-
-* Home Page
-* Dashboard
-* Event Creation
-* Authentication Page
-
----
 
 ## 👨‍💻 My Contribution
 
